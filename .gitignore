@@ -32,6 +32,11 @@ bld/
 [Oo]ut/
 [Ll]og/
 [Ll]ogs/
+[Pp]kg/
+[Mm]igrationBackup/
+
+# DoxFX
+/docfx.json
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
@@ -205,6 +210,7 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
 *.nuget.targets
+/*.nuspec
 
 # Microsoft Azure Build Output
 csx/
@@ -361,3 +367,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Log
+/log.txt
+/migration_backup/45e30f09/BasicButtManager
+/docs/READMENuget.md
+/TODO.txt
