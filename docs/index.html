@@ -72,7 +72,7 @@
 <p>To set all your machines to half intensity:</p>
 <ol>
 <li>Launch <a href="https://intiface.com/central/">Intiface <span class="emoji" shortcode="copyright">©️</span> Central</a> and connect your toys.</li>
-<li>Launch ButtServer.exe</li>
+<li>Launch <a href="https://github.com/MLTorches/ButtServer/releases/latest">ButtServer</a>.</li>
 <li>Somewhere in your code...</li>
 </ol>
 <pre><code>IPHostEntry ipHostInfo = Dns.GetHostEntryAsync(&quot;localhost&quot;).Result;
@@ -85,17 +85,15 @@ Send(&quot;Set 0.5&quot;);
 Send(&quot;Disconnect&quot;);
 </code></pre><h2 id="butt-client">Butt Client</h2>
 <p>If you are thinking, &quot;wow much code&quot; - you would be correct!</p>
-<p>Instead of writing all of this yourself, you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
+<p>Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
 <p>The code above would then simplify to:</p>
 <pre><code>ButtClient client = new ButtClient(&quot;BuzzRhythm&quot;);
 client.Set(0.5f);
 client.Disconnect();
 </code></pre><p>Then you can focus on your game logic instead of these lower level interfaces.<br>
 For more information, check out the GitHub page for ButtClient!</p>
-<h2 id="wiki">Wiki</h2>
-<p>Click <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">here</a> to view the documentation!</p>
 <h2 id="download">Download</h2>
-<p>Click <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">here</a> to download the application!</p>
+<p>Click <a href="https://github.com/MLTorches/ButtServer/releases/latest">here</a> to download the application!</p>
 <h2 id="credits">Credits</h2>
 <p>Buttplug: <a href="https://github.com/qdot">qdot@github.com</a> | Favicon: <a href="https://www.flaticon.com/authors/frdmn">freepik@flaticon.com</a></p>
 <h2 id="license">License</h2>

@@ -9,10 +9,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "BX2DJjYp9Q76r5Mad/DwSsHyrJWcb6xuAqD/JG+i93M="
+          "hash": "OoD6IicJH0UzbqKSAU7srbXh07i4PSc4errDQ59rgKc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -76,7 +76,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 1,
-          "skipped_file_count": 1
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
