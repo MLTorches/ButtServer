@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Butt Server  </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Butt Server  ">
+    <meta name="generator" content="docfx 2.59.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="butt-server-smiling-peachhttpscamogithubusercontentcom82d932c73232f2fa5afaad48b74c5c16d659ba1a138b56e6965777356370c02568747470733a2f2f6d6c746f72636865732e6769746875622e696f2f4261736963427574744d616e616765722f7265736f75726365732f66617669636f6e32342e706e67">Butt Server <img src="https://camo.githubusercontent.com/82d932c73232f2fa5afaad48b74c5c16d659ba1a138b56e6965777356370c025/68747470733a2f2f6d6c746f72636865732e6769746875622e696f2f4261736963427574744d616e616765722f7265736f75726365732f66617669636f6e32342e706e67" alt="Smiling Peach"></h1>
+
+<p>Lightweight server for controlling sex toys via plain websockets.</p>
+<p>The purpose of this project is to remove the client&#39;s dependency upon certain framework-dependent libraries (<em>ahem</em> Json.NET <em>ahem</em>) that can cause issues if you just reference BasicButtManager (or Buttplug itself for that matter) directly from within a Unity game built on an older .NET framework.</p>
+<p>And of course there&#39;s also the issue of integrating Buttplug with games and applications written in other languages/frameworks entirely independent of C#/.NET or one of the supported ports... And therein enters the Butt Server.</p>
+<p>With this middleman application, it doesn&#39;t matter what language/framework you are using and from where, <strong><em>as long as you are capable of sending plain strings to a local port, you can control all your sex toys</em></strong>. C#, C, C++, Java, Python, Rust, JS, etc. whatever just send a message to localhost:42069.</p>
+<p>That&#39;s it, no other dependencies required.</p>
+<p><img src="resources/server2.png" alt="Sample Server"></p>
+<h2 id="usage">Usage</h2>
+<p>To set all your machines to half intensity:</p>
+<ol>
+<li>Launch <a href="https://intiface.com/central/">Intiface <span class="emoji" shortcode="copyright">©️</span> Central</a> and connect your toys.</li>
+<li>Launch ButtServer.exe</li>
+<li>Somewhere in your code...</li>
+</ol>
+<pre><code>IPHostEntry ipHostInfo = Dns.GetHostEntryAsync(&quot;localhost&quot;).Result;
+IPAddress ipAddress = ipHostInfo.AddressList[0];
+IPEndPoint ipEndPt = new IPEndPoint(ipAddress, 42069);
+
+Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+socket.Connect(ipEndPt);
+Send(&quot;Set 0.5&quot;);
+Send(&quot;Disconnect&quot;);
+</code></pre><h2 id="butt-client">Butt Client</h2>
+<p>If you are thinking, &quot;wow much code&quot; - you would be correct!</p>
+<p>Instead of writing all of this yourself, you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
+<p>The code above would then simplify to:</p>
+<pre><code>ButtClient client = new ButtClient(&quot;BuzzRhythm&quot;);
+client.Set(0.5f);
+client.Disconnect();
+</code></pre><p>Then you can focus on your game logic instead of these lower level interfaces.<br>
+For more information, check out the GitHub page for ButtClient!</p>
+<h2 id="wiki">Wiki</h2>
+<p>Click <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">here</a> to view the documentation!</p>
+<h2 id="download">Download</h2>
+<p>Click <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">here</a> to download the application!</p>
+<h2 id="credits">Credits</h2>
+<p>Buttplug: <a href="https://github.com/qdot">qdot@github.com</a> | Favicon: <a href="https://www.flaticon.com/authors/frdmn">freepik@flaticon.com</a></p>
+<h2 id="license">License</h2>
+<p>This project is BSD 3-Clause licensed.</p>
+<pre><code class="lang-text">Copyright (c) 2023, MLTorches
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice, this
+  list of conditions and the following disclaimer.
+
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+* Neither the name of the copyright holder nor the names of its
+  contributors may be used to endorse or promote products derived from
+  this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot;
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
