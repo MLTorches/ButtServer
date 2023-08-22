@@ -18,7 +18,7 @@ That's it, no other dependencies required.
 To set all your machines to half intensity:
 
 1. Launch [Intiface :copyright: Central](https://intiface.com/central/) and connect your toys.
-2. Launch [ButtServer](https://github.com/MLTorches/ButtServer/releases/tag/v.1.0.0).
+2. Launch [ButtServer](https://github.com/MLTorches/ButtServer/releases/latest).
 3. Somewhere in your code...
 
 ```
@@ -35,7 +35,7 @@ Send("Disconnect");
 ## Butt Client
 If you are thinking, "wow much code" - you would be correct!
 
-Instead of writing all of this yourself, you should probably use the accompanying development package ButtClient instead, available on NuGet.
+Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.
 
 The code above would then simplify to:
 ```
@@ -48,7 +48,7 @@ Then you can focus on your game logic instead of these lower level interfaces.<b
 For more information, check out the GitHub page for ButtClient!
 
 ## Download
-Click [here](https://github.com/MLTorches/ButtServer/releases/tag/v.1.0.0) to download the application!
+Click [here](https://github.com/MLTorches/ButtServer/releases/latest) to download the application!
 
 ## Credits
 Buttplug: [qdot@github.com](https://github.com/qdot) | Favicon: [freepik@flaticon.com](https://www.flaticon.com/authors/frdmn)
