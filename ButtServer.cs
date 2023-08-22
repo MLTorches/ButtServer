@@ -53,7 +53,9 @@ namespace ButtServer
                         byte[] buffer = new byte[1024];
                         int count = handler.Receive(buffer);
                         String payload = Encoding.ASCII.GetString(buffer, 0, count);
-                        Process(payload);
+
+                        String[] commands = payload.Split('\n');
+                        foreach (String command in commands) Process(command);
                     }
                 });
 
@@ -66,9 +68,9 @@ namespace ButtServer
         }
 
         /// <summary>
-        /// Process the payload from ButtClient and call the appropriate BasicButtManager interface.
+        /// Process the command from ButtClient and call the appropriate BasicButtManager interface.
         /// </summary>
-        /// <param name="payload">The raw payload received from the client.</param>
+        /// <param name="command">The raw payload received from the client.</param>
         /// <remarks>Sample valid messages (excluding quotations): <br/><br/>
         /// "ClientName FadeIn" <br/>
         /// "ClientName Set 0.5" <br/>
@@ -77,17 +79,17 @@ namespace ButtServer
         /// Developers should consider using the pre-developed wrapper ButtClient package to communicate with this server,<br/>
         /// as the messages have already been formatted to meet the specification there.
         /// </remarks>
-        private static void Process(String payload)
+        private static void Process(String command)
         {
             try
             {
-                if (payload.Length == 0) return;
+                if (command.Length == 0) return;
 
-                String[] tokens = payload.Split(' ');
+                String[] tokens = command.Split(' ');
                 String client = tokens[0];
                 String timestamp = DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss.fff");
 
-                Console.Write($"[{timestamp}] <{client}>: {payload.Substring(tokens[0].Length + 1)}");
+                Console.WriteLine($"[{timestamp}] <{client}>: {command.Substring(tokens[0].Length + 1)}");
 
                 switch (tokens[1])
                 {
@@ -137,7 +139,7 @@ namespace ButtServer
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{ex}\n\n[INTERNAL ERROR PROCESSING COMMAND \"{payload}\"] Please submit a GitHub issue, thank you.");
+                Console.WriteLine($"{ex}\n\n[INTERNAL ERROR PROCESSING COMMAND \"{command}\"] Please submit a GitHub issue, thank you.");
             }
         }
     }
