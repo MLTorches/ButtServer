@@ -28,11 +28,16 @@ IPEndPoint ipEndPt = new IPEndPoint(ipAddress, 42069);
 
 Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 socket.Connect(ipEndPt);
-Send("clientName Set 0.5");
-Send("clientName Disconnect");
+
+socket.Send(Encoding.ASCII.GetBytes("clientName Connected\n"));
+socket.Send(Encoding.ASCII.GetBytes("clientName Set 0.5\n"));
+socket.Send(Encoding.ASCII.GetBytes("clientName Disconnected\n"));
+
+socket.Shutdown(SocketShutdown.Both);
+socket.Close();
 ```
 
-where `clientName` is a no-space string representing well... the client's name.
+where `clientName` is a no-space plain ASCII string representing well... the client's name.
 
 ## Butt Client
 If you are thinking, "wow much code" - you would be correct!

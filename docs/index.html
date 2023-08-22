@@ -81,9 +81,14 @@ IPEndPoint ipEndPt = new IPEndPoint(ipAddress, 42069);
 
 Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 socket.Connect(ipEndPt);
-Send(&quot;clientName Set 0.5&quot;);
-Send(&quot;clientName Disconnect&quot;);
-</code></pre><p>where <code>clientName</code> is a no-space string representing well... the client&#39;s name.</p>
+
+socket.Send(Encoding.ASCII.GetBytes(&quot;clientName Connected\n&quot;));
+socket.Send(Encoding.ASCII.GetBytes(&quot;clientName Set 0.5\n&quot;));
+socket.Send(Encoding.ASCII.GetBytes(&quot;clientName Disconnected\n&quot;));
+
+socket.Shutdown(SocketShutdown.Both);
+socket.Close();
+</code></pre><p>where <code>clientName</code> is a no-space plain ASCII string representing well... the client&#39;s name.</p>
 <h2 id="butt-client">Butt Client</h2>
 <p>If you are thinking, &quot;wow much code&quot; - you would be correct!</p>
 <p>Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
