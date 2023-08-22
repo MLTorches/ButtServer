@@ -5,7 +5,7 @@ Lightweight server for controlling sex toys via plain websockets.
 
 The purpose of this project is to remove the client's dependency upon certain framework-dependent libraries (*ahem* Json.NET *ahem*) that can cause issues if you just reference BasicButtManager (or Buttplug itself for that matter) directly from within a Unity game built on an older .NET framework.
 
-And of course there's also the issue of integrating Buttplug with games and applications written in other languages/frameworks entirely independent of C#/.NET or one of the supported ports... And therein enters the Butt Server.
+And of course there's also the issue of integrating Buttplug with games and applications written in other languages/frameworks entirely independent of C#/.NET or one of the supported ports...
 
 With this middleman application, it doesn't matter what language/framework you are using and from where, ***as long as you are capable of sending plain strings to a local port, you can control all your sex toys***. C#, C, C++, Java, Python, Rust, JS, etc. whatever just send a message to localhost:42069.
 
