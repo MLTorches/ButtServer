@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ypo+spUv1NnKyDwIVzoCzyMhQloox1i1orkpPZIYFhM="
+          "hash": "h4nJDoCrm74JSRlqvwftaQQgao4Lv7XDirupgw/U/i8="
         }
       },
       "is_incremental": false,
@@ -67,11 +67,11 @@
     {
       "status": {
         "can_incremental": false,
-        "details": "Cannot build incrementally because config changed.",
+        "details": "Disable incremental build by force rebuild option.",
         "incrementalPhase": "build",
         "total_file_count": 0,
         "skipped_file_count": 0,
-        "full_build_reason_code": "ConfigChanged"
+        "full_build_reason_code": "ForceRebuild"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
@@ -104,8 +104,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
