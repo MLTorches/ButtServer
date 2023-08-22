@@ -3,7 +3,7 @@
 
 Lightweight server for controlling sex toys via plain websockets.
 
-The purpose of this project is to remove the client's dependency upon certain framework-dependent libraries (*ahem* Json.NET *ahem*) that can cause issues if you just reference BasicButtManager (or Buttplug itself for that matter) directly from within a Unity game built on an older .NET framework.
+The purpose of this project is to remove the client's dependency upon certain framework-dependent libraries (*ahem* Json.NET *ahem*) that can cause issues if you just reference [BasicButtManager](https://github.com/MLTorches/BasicButtManager) (or [Buttplug](https://github.com/buttplugio/buttplug-csharp) itself for that matter) directly from within a Unity game built on an older .NET framework.
 
 And of course there's also the issue of integrating Buttplug with games and applications written in other languages/frameworks entirely independent of C#/.NET or one of the supported ports...
 
