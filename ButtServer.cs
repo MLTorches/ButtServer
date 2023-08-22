@@ -72,10 +72,11 @@ namespace ButtServer
         /// </summary>
         /// <param name="command">The raw payload received from the client.</param>
         /// <remarks>Sample valid messages (excluding quotations): <br/><br/>
-        /// "ClientName FadeIn" <br/>
-        /// "ClientName Set 0.5" <br/>
-        /// "ClientName Control 0.5 0.5 false"<br/><br/>
+        /// "ClientName FadeIn\n" <br/>
+        /// "ClientName Set 0.5\n" <br/>
+        /// "ClientName Control 0.5 0.5 false\n"<br/><br/>
         /// 
+        /// Note: <u>the commands are delimited by '\n'</u> so remember to include it.<br/><br/>
         /// Developers should consider using the pre-developed wrapper ButtClient package to communicate with this server,<br/>
         /// as the messages have already been formatted to meet the specification there.
         /// </remarks>

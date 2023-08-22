@@ -28,9 +28,11 @@ IPEndPoint ipEndPt = new IPEndPoint(ipAddress, 42069);
 
 Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 socket.Connect(ipEndPt);
-Send("Set 0.5");
-Send("Disconnect");
+Send("clientName Set 0.5");
+Send("clientName Disconnect");
 ```
+
+where `clientName` is a no-space string representing well... the client's name.
 
 ## Butt Client
 If you are thinking, "wow much code" - you would be correct!
@@ -46,6 +48,16 @@ client.Disconnect();
 
 Then you can focus on your game logic instead of these lower level interfaces.<br/>
 For more information, check out the GitHub page for ButtClient!
+
+## Wiki
+For the list of available commands, check out [BasicButtManager](https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html)'s documentation.
+
+Each command and their arguments will be separated by spaces within the command string instead of the regular function notation. <u>The commands must also be separated by the newline character.</u> Thus:
+* `gameManager.Set(0.5f)` becomes `"clientName Set 0.5\n"`
+* `gameManager.FadeIn()` becomes `"clientName FadeIn\n"`
+* `gameManager.Stop()` becomes `"clientName Stop\n"`, etc.
+
+
 
 ## Download
 Click [here](https://github.com/MLTorches/ButtServer/releases/latest) to download the application!

@@ -81,9 +81,10 @@ IPEndPoint ipEndPt = new IPEndPoint(ipAddress, 42069);
 
 Socket socket = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 socket.Connect(ipEndPt);
-Send(&quot;Set 0.5&quot;);
-Send(&quot;Disconnect&quot;);
-</code></pre><h2 id="butt-client">Butt Client</h2>
+Send(&quot;clientName Set 0.5&quot;);
+Send(&quot;clientName Disconnect&quot;);
+</code></pre><p>where <code>clientName</code> is a no-space string representing well... the client&#39;s name.</p>
+<h2 id="butt-client">Butt Client</h2>
 <p>If you are thinking, &quot;wow much code&quot; - you would be correct!</p>
 <p>Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
 <p>The code above would then simplify to:</p>
@@ -92,6 +93,14 @@ client.Set(0.5f);
 client.Disconnect();
 </code></pre><p>Then you can focus on your game logic instead of these lower level interfaces.<br>
 For more information, check out the GitHub page for ButtClient!</p>
+<h2 id="wiki">Wiki</h2>
+<p>For the list of available commands, check out <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">BasicButtManager</a>&#39;s documentation.</p>
+<p>Each command and their arguments will be separated by spaces within the command string instead of the regular function notation. <u>The commands must also be separated by the newline character.</u> Thus:</p>
+<ul>
+<li><code>gameManager.Set(0.5f)</code> becomes <code>&quot;clientName Set 0.5\n&quot;</code></li>
+<li><code>gameManager.FadeIn()</code> becomes <code>&quot;clientName FadeIn\n&quot;</code></li>
+<li><code>gameManager.Stop()</code> becomes <code>&quot;clientName Stop\n&quot;</code>, etc.</li>
+</ul>
 <h2 id="download">Download</h2>
 <p>Click <a href="https://github.com/MLTorches/ButtServer/releases/latest">here</a> to download the application!</p>
 <h2 id="credits">Credits</h2>
