@@ -11,7 +11,7 @@ With this middleman application, it doesn't matter what language/framework you a
 
 That's it, no other dependencies required.
 
-![Sample Server](resources/server.PNG)
+![Sample Server](https://github.com/MLTorches/ButtServer/blob/master/resources/server.PNG?raw=true)
 
 ## Usage
 
