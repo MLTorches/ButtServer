@@ -42,7 +42,7 @@ where `clientName` is a no-space plain ASCII string representing well... the cli
 ## Butt Client
 If you are thinking, "wow much code" - you would be correct!
 
-Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.
+Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on [NuGet](https://www.nuget.org/packages/ButtClient/).
 
 The code above would then simplify to:
 ```
@@ -52,7 +52,7 @@ client.Disconnect();
 ```
 
 Then you can focus on your game logic instead of these lower level interfaces.<br/>
-For more information, check out the GitHub page for ButtClient!
+For more information, check out the [GitHub](https://github.com/MLTorches/ButtClient) page for ButtClient!
 
 ## Wiki
 For the list of available commands, check out [BasicButtManager](https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html)'s documentation.

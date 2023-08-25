@@ -91,13 +91,13 @@ socket.Close();
 </code></pre><p>where <code>clientName</code> is a no-space plain ASCII string representing well... the client&#39;s name.</p>
 <h2 id="butt-client">Butt Client</h2>
 <p>If you are thinking, &quot;wow much code&quot; - you would be correct!</p>
-<p>Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on NuGet.</p>
+<p>Instead of writing all of this yourself (and more), you should probably use the accompanying development package ButtClient instead, available on <a href="https://www.nuget.org/packages/ButtClient/">NuGet</a>.</p>
 <p>The code above would then simplify to:</p>
 <pre><code>ButtClient client = new ButtClient(&quot;BuzzRhythm&quot;);
 client.Set(0.5f);
 client.Disconnect();
 </code></pre><p>Then you can focus on your game logic instead of these lower level interfaces.<br>
-For more information, check out the GitHub page for ButtClient!</p>
+For more information, check out the <a href="https://github.com/MLTorches/ButtClient">GitHub</a> page for ButtClient!</p>
 <h2 id="wiki">Wiki</h2>
 <p>For the list of available commands, check out <a href="https://mltorches.github.io/BasicButtManager/api/BasicButtManager.BasicButtManager.html">BasicButtManager</a>&#39;s documentation.</p>
 <p>Each command and their arguments will be separated by spaces within the command string instead of the regular function notation. <u>The commands must also be separated by the newline character.</u> Thus:</p>
